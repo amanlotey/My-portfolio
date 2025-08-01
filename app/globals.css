@@ -5,7 +5,13 @@
 
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer utilities {
+
+  
   .flip-card {
     perspective: 1000px;
   }

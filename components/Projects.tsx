@@ -4,8 +4,10 @@ import { Card, CardContent, CardTitle } from "@/components/ui/Card"
 export default function Projects() {
   return (
     <section className="py-20 px-4 md:px-10 bg-black" id="projects">
-      <h2 className="text-4xl font-bold text-center mb-20 text-white tracking-tight">Projects</h2>
-
+      <h2 className="relative text-4xl md:text-5xl font-bold text-white text-center mb-20 group">
+  Projects
+  <span className="block h-1 w-24 mx-auto mt-2 bg-purple-500 transition-all duration-500 group-hover:w-36"></span>
+</h2>
       <div className="flex flex-col gap-20 max-w-6xl mx-auto">
 
         {/* Notes App */}
