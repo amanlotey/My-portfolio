@@ -3,8 +3,6 @@
 import Image from "next/image"
 import { Card, CardContent, CardTitle } from "@/components/ui/Card"
 import { motion } from "framer-motion"
-import TechBubbles from "@/components/TechBubbles"
-
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },

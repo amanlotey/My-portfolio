@@ -9,6 +9,7 @@ import {
   SiMongodb, SiPostgresql, SiNextdotjs, SiRedux, SiMysql,
 } from 'react-icons/si'
 import { motion } from 'framer-motion'
+import RadarChart from '@/components/RadarChart'
 
 const techStack = [
   { name: 'React', icon: <FaReact />, color: 'text-blue-400', years: '3+ years' },
@@ -92,6 +93,12 @@ const About = () => {
           ))}
         </motion.div>
       </div>
+      <section className="py-20 px-4 md:px-10 bg-black text-white">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">🧠 Tech Radar</h2>
+      <div className="max-w-4xl mx-auto">
+        <RadarChart />
+      </div>
+    </section>
     </section>
   )
 }

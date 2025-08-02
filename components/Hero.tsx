@@ -70,7 +70,7 @@ const Hero = () => {
 
         <a
           onClick={() => smoothScrollTo('projects')}
-          className="cursor-pointer mt-6 inline-block px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold shadow-lg hover:opacity-90 transition"
+          className="cursor-pointer mt-6 self-center   inline-block px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold shadow-lg hover:opacity-90 transition"
         >
           View My Work
         </a>
