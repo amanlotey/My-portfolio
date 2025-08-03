@@ -7,6 +7,47 @@ body{
   cursor: none;
 }
 
+/* in globals.css */
+.glitch {
+  position: relative;
+  color: white;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  clip: rect(0, 900px, 0, 0);
+}
+.glitch::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+}
+.glitch::after {
+  animation: glitchBottom 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitchTop {
+  0% {
+    clip: rect(0, 999px, 0, 0);
+  }
+  100% {
+    clip: rect(0, 999px, 100%, 0);
+    transform: translate(2px, -2px);
+  }
+}
+@keyframes glitchBottom {
+  0% {
+    clip: rect(0, 999px, 0, 0);
+  }
+  100% {
+    clip: rect(0, 999px, 100%, 0);
+    transform: translate(-2px, 2px);
+  }
+}
+
 
 
 @layer utilities {

@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
+import TypewriterText from './TypeWriter'
 
 const Hero = () => {
   const smoothScrollTo = (id: string) => {
@@ -28,15 +29,25 @@ const Hero = () => {
           <span className="h-16 w-1 bg-gradient-to-b from-purple-500 to-pink-500 rounded"></span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
             Hi, I'm{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
-              Amandeep Singh
-            </span>
+            <span
+  className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 glitch"
+  data-text="Amandeep Singh"
+>
+  Amandeep Singh
+</span>
+
           </h1>
         </div>
 
-        <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-          I’m a passionate software developer who loves building modern, responsive web and mobile apps using tools like React, React Native, Node.js, and Firebase.
-        </p>
+          <TypewriterText
+  phrases={[
+    'Crafting Scalable Web Apps',
+    'Building Intuitive Mobile Experiences',
+    'Designing Seamless User Journeys',
+    'Turning Ideas into Products',
+  ]}
+  className="w-full text-center text-[#E8EDDF] text-lg sm:text-xl font-light"
+/>
 
         <a
           onClick={() => smoothScrollTo('projects')}
