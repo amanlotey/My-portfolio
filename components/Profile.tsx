@@ -18,8 +18,8 @@ const Hero = () => {
 
   return (
 <section
-  id="hero"
-  className="relative min-h-screen text-white overflow-hidden px-6 flex flex-col justify-center items-center text-center bg-gradient-to-b from-black via-[#01162f] to-black"
+  id="profile"
+  className="relative min-h-screen text-white overflow-hidden px-6 flex flex-col justify-center items-center text-center bg-gradient-to-b from-black via-black to-[#01162f]"
 >
       <div className="z-10 flex flex-col items-start gap-6 max-w-3xl">
         <div className="flex items-center gap-4">
@@ -45,10 +45,13 @@ const Hero = () => {
   ]}
   className="w-full text-center text-[#E8EDDF] text-lg sm:text-xl font-light"
 />
+        <p className="text-gray-400 text-sm sm:text-base mt-2 tracking-wide text-center self-center">
+  Full-Stack Developer crafting seamless web and mobile experiences
+</p>
 
         <a
           onClick={() => smoothScrollTo('projects')}
-          className="cursor-pointer mt-6 self-center inline-block px-6 py-3 rounded-full bg-[#CFDBD5]  text-black font-semibold shadow-lg hover:opacity-90 transition"
+          className="cursor-pointer mt-6 self-center inline-block px-6 py-3 rounded-full bg-[#8fd3d5]  text-black font-semibold shadow-lg hover:opacity-70 transition"
         >
           View My Work
         </a>

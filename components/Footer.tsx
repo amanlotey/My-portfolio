@@ -7,7 +7,7 @@ const Footer = () => {
         <p className="mb-2 sm:mb-0">&copy; {new Date().getFullYear()} Amandeep Singh. All rights reserved.</p>
         <div className="flex gap-4">
           <a
-            href="https://github.com/amandeep-dev"
+            href="https://github.com/amanlotey"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-purple-300 transition"
