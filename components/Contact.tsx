@@ -127,7 +127,7 @@ export default function Contact() {
 
             <Button
               type="submit"
-              className="w-full mt-8 bg-[#8fd3d5] text-black font-semibold hover:bg-[#abe7d600] transition"
+              className="w-full mt-8 bg-[#8fd3d5] text-black font-semibold hover:bg-[#547e80] transition"
               disabled={isLoading}
             >
               {isLoading ? "Sending..." : "Send Message"}
