@@ -15,8 +15,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "A showcase of my projects and skills as a developer. Explore my work, learn about my background, and get in touch.",
+  title: "Amandeep Singh | Full-Stack Developer",
+  description:
+    "Portfolio of Amandeep Singh – a React & React Native developer building web and mobile apps.",
+  keywords: [
+    "Amandeep Singh",
+    "React Developer",
+    "React Native",
+    "Full-Stack Developer",
+    "Next.js",
+    "Portfolio",
+  ],
+  authors: [{ name: "Amandeep Singh", url: "https://your-site.com" }],
+  openGraph: {
+    title: "Amandeep Singh | Full-Stack Developer",
+    description:
+      "Web & Mobile Developer – React, React Native, Node.js, MongoDB.",
+    url: "https://your-site.com",
+    siteName: "Amandeep Portfolio",
+    images: [
+      {
+        url: "/images/og-banner.png", // 1200x630 recommended
+        width: 1200,
+        height: 630,
+        alt: "Amandeep Singh Portfolio",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -26,13 +52,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        {/* Optional Apple icon */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* Optional meta tags if needed */}
+        <meta name="theme-color" content="#000000" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth bg-background text-foreground`}
       >
         <Header />
-        <main className="w-full ">
-          {children}
-        </main>
+        <main className="w-full">{children}</main>
         <Footer />
       </body>
     </html>
