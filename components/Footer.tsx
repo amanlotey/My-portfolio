@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
     <footer className="w-full border-t border-white/10 bg-black/30 backdrop-blur-md text-gray-300 text-sm">
       <div className="max-w-5xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between">
-        <p className="mb-2 sm:mb-0">&copy; {new Date().getFullYear()} Amandeep Singh. All rights reserved.</p>
+        <p className="mb-2 sm:mb-0">
+          &copy; {new Date().getFullYear()} Amandeep Singh. All rights reserved.
+        </p>
         <div className="flex gap-4">
           <a
             href="https://github.com/amanlotey"
@@ -31,7 +33,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

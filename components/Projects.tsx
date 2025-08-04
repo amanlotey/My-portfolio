@@ -4,10 +4,11 @@ import Image from "next/image"
 import { Card, CardContent, CardTitle, CardFooter } from "@/components/ui/Card"
 import { motion } from "framer-motion"
 import { FaGithub } from "react-icons/fa"
+import type { Variants } from "framer-motion"
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 50 },
-  visible: (i = 1) => ({
+  visible: (i: number = 1) => ({
     opacity: 1,
     y: 0,
     transition: {

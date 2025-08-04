@@ -26,7 +26,7 @@ export default function Header() {
         >
           Contact
         </a>
-      </nav>  
+      </nav>
     </header>
   );
 }

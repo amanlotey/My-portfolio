@@ -1,35 +1,50 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React from "react";
 import {
-  FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaDatabase,
-} from 'react-icons/fa'
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaGitAlt,
+  FaGithub,
+  FaDatabase,
+} from "react-icons/fa";
 import {
-  SiTailwindcss, SiFirebase, SiTypescript, SiJavascript,
-  SiMongodb, SiPostgresql, SiNextdotjs, SiRedux, SiMysql,
-} from 'react-icons/si'
-import { motion } from 'framer-motion'
-import dynamic from 'next/dynamic'
-const RadarChart = dynamic(() => import('@/components/RadarChart'), { ssr: false })
+  SiTailwindcss,
+  SiFirebase,
+  SiTypescript,
+  SiJavascript,
+  SiMongodb,
+  SiPostgresql,
+  SiNextdotjs,
+  SiRedux,
+  SiMysql,
+} from "react-icons/si";
+import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+const RadarChart = dynamic(() => import("@/components/RadarChart"), {
+  ssr: false,
+});
 
 const techStack = [
-  { name: 'React', icon: <FaReact />, color: 'text-blue-400' },
-  { name: 'Next.js', icon: <SiNextdotjs />, color: 'text-white' },
-  { name: 'Redux', icon: <SiRedux />, color: 'text-purple-500' },
-  { name: 'Node.js', icon: <FaNodeJs />, color: 'text-green-500' },
-  { name: 'TypeScript', icon: <SiTypescript />, color: 'text-blue-600' },
-  { name: 'JavaScript', icon: <SiJavascript />, color: 'text-yellow-400' },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: 'text-teal-400' },
-  { name: 'HTML5', icon: <FaHtml5 />, color: 'text-orange-500' },
-  { name: 'CSS3', icon: <FaCss3Alt />, color: 'text-blue-500' },
-  { name: 'Firebase', icon: <SiFirebase />, color: 'text-yellow-500' },
-  { name: 'MongoDB', icon: <SiMongodb />, color: 'text-green-600' },
-  { name: 'PostgreSQL', icon: <SiPostgresql />, color: 'text-blue-800' },
-  { name: 'MySQL', icon: <SiMysql />, color: 'text-sky-500' },
-  { name: 'Git', icon: <FaGitAlt />, color: 'text-red-500' },
-  { name: 'GitHub', icon: <FaGithub />, color: 'text-gray-300' },
-  { name: 'Databases', icon: <FaDatabase />, color: 'text-cyan-400' },
-]
+  { name: "React", icon: <FaReact />, color: "text-blue-400" },
+  { name: "Next.js", icon: <SiNextdotjs />, color: "text-white" },
+  { name: "Redux", icon: <SiRedux />, color: "text-purple-500" },
+  { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
+  { name: "TypeScript", icon: <SiTypescript />, color: "text-blue-600" },
+  { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-400" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-teal-400" },
+  { name: "HTML5", icon: <FaHtml5 />, color: "text-orange-500" },
+  { name: "CSS3", icon: <FaCss3Alt />, color: "text-blue-500" },
+  { name: "Firebase", icon: <SiFirebase />, color: "text-yellow-500" },
+  { name: "MongoDB", icon: <SiMongodb />, color: "text-green-600" },
+  { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-blue-800" },
+  { name: "MySQL", icon: <SiMysql />, color: "text-sky-500" },
+  { name: "Git", icon: <FaGitAlt />, color: "text-red-500" },
+  { name: "GitHub", icon: <FaGithub />, color: "text-gray-300" },
+  { name: "Databases", icon: <FaDatabase />, color: "text-cyan-400" },
+];
 
 const container = {
   hidden: { opacity: 0 },
@@ -39,12 +54,12 @@ const container = {
       staggerChildren: 0.08,
     },
   },
-}
+};
 
 const item = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0 },
-}
+};
 
 const About = () => {
   return (
@@ -57,9 +72,19 @@ const About = () => {
             <span className="block h-1 w-24 mx-auto mt-2 bg-purple-500 transition-all duration-500 group-hover:w-36"></span>
           </h2>
           <p className="text-lg text-gray-300 leading-relaxed">
-            I’m a developer who thrives on turning abstract ideas into intuitive digital experiences. For me, writing code isn’t just about syntax — it’s about designing smooth flows, solving unseen problems, and leaving a touch of delight in every interface.
-            <br /><br />
-            I’ve spent the past few years immersed in modern web and mobile technologies, always exploring the edges of what's possible. Whether building something from scratch or refining something already good, I bring a blend of precision, curiosity, and creative instinct to the process. And when I’m not shipping features, you’ll probably find me dissecting UI patterns, optimizing backend flows, or sketching out “what if” ideas just for fun.
+            I’m a developer who thrives on turning abstract ideas into intuitive
+            digital experiences. For me, writing code isn’t just about syntax —
+            it’s about designing smooth flows, solving unseen problems, and
+            leaving a touch of delight in every interface.
+            <br />
+            <br />
+            I’ve spent the past few years immersed in modern web and mobile
+            technologies, always exploring the edges of what's possible. Whether
+            building something from scratch or refining something already good,
+            I bring a blend of precision, curiosity, and creative instinct to
+            the process. And when I’m not shipping features, you’ll probably
+            find me dissecting UI patterns, optimizing backend flows, or
+            sketching out “what if” ideas just for fun.
           </p>
         </div>
 
@@ -77,13 +102,14 @@ const About = () => {
               variants={item}
               className="w-24 h-24 sm:w-28 sm:h-28 transition-transform duration-300 transform hover:scale-110 rounded-xl flip-card group"
               onMouseEnter={(e) => {
-                const color = getComputedStyle(
-                  e.currentTarget.querySelector('.icon')
-                ).color
-                e.currentTarget.style.boxShadow = `0 0 20px 4px ${color}`
+                const iconEl = e.currentTarget.querySelector(".icon");
+                if (iconEl instanceof Element) {
+                  const color = getComputedStyle(iconEl).color;
+                  e.currentTarget.style.boxShadow = `0 0 20px 4px ${color}`;
+                }
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = 'none'
+                e.currentTarget.style.boxShadow = "none";
               }}
             >
               <div className="flip-inner bg-[#0f0f0f] text-white rounded-xl h-full w-full">
@@ -107,13 +133,15 @@ const About = () => {
 
       {/* Radar Chart */}
       <section className="py-20 px-4 md:px-10 bg-black text-white">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">🧠 Tech Radar</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+          🧠 Tech Radar
+        </h2>
         <div className="max-w-4xl mx-auto">
           <RadarChart />
         </div>
       </section>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

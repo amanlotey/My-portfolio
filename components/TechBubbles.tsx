@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Card, CardContent, CardTitle } from "@/components/ui/Card"
-import { motion } from "framer-motion"
+import Image from "next/image";
+import { Card, CardContent, CardTitle } from "@/components/ui/Card";
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: (i = 1) => ({
     opacity: 1,
@@ -15,7 +16,7 @@ const fadeInUp = {
       ease: "easeOut",
     },
   }),
-}
+};
 
 export default function Projects() {
   return (
@@ -37,19 +38,24 @@ export default function Projects() {
           <Card className="bg-[#111111] border border-purple-700/30 rounded-2xl shadow-xl p-6 md:p-10 transition-transform hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.3)] hover:scale-[1.02]">
             <div className="flex flex-col-reverse md:flex-row items-center md:items-start gap-10">
               <div className="md:w-1/2 w-full text-center md:text-left">
-                <CardTitle className="text-3xl md:text-4xl mb-4 text-purple-300 font-semibold">📝 Notes App</CardTitle>
+                <CardTitle className="text-3xl md:text-4xl mb-4 text-purple-300 font-semibold">
+                  📝 Notes App
+                </CardTitle>
                 <p className="text-base text-gray-300 mb-5 max-w-lg leading-relaxed">
-                  A personal notes app designed for clarity and ease. Features a seamless interface for writing and managing thoughts.
+                  A personal notes app designed for clarity and ease. Features a
+                  seamless interface for writing and managing thoughts.
                 </p>
                 <div className="flex justify-center md:justify-start flex-wrap gap-3">
-                  {["React", "Express", "MongoDB", "Tailwind", "Bootstrap"].map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-purple-900/30 text-purple-200 font-medium text-xs px-3 py-1 rounded-full shadow-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  {["React", "Express", "MongoDB", "Tailwind", "Bootstrap"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="bg-purple-900/30 text-purple-200 font-medium text-xs px-3 py-1 rounded-full shadow-sm"
+                      >
+                        {tag}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
               <div className="md:w-1/2 w-full flex justify-center md:justify-end">
@@ -99,19 +105,24 @@ export default function Projects() {
                 </div>
               </div>
               <div className="md:w-1/2 w-full text-center md:text-left">
-                <CardTitle className="text-3xl md:text-4xl mb-4 text-purple-300 font-semibold">🎬 Movies App</CardTitle>
+                <CardTitle className="text-3xl md:text-4xl mb-4 text-purple-300 font-semibold">
+                  🎬 Movies App
+                </CardTitle>
                 <p className="text-base text-gray-300 mb-5 max-w-lg leading-relaxed">
-                  A clean and dynamic mobile interface for exploring trending films and keeping up with cinematic gems on the go.
+                  A clean and dynamic mobile interface for exploring trending
+                  films and keeping up with cinematic gems on the go.
                 </p>
                 <div className="flex justify-center md:justify-start flex-wrap gap-3">
-                  {["React Native", "Appwrite", "Tailwind", "Expo"].map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-purple-900/30 text-purple-200 font-medium text-xs px-3 py-1 rounded-full shadow-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  {["React Native", "Appwrite", "Tailwind", "Expo"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="bg-purple-900/30 text-purple-200 font-medium text-xs px-3 py-1 rounded-full shadow-sm"
+                      >
+                        {tag}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -119,5 +130,5 @@ export default function Projects() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
