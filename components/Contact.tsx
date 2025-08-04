@@ -20,11 +20,12 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_2vvrz1v",
-        "template_56nih1b",
-        formRef.current,
-        "kILjeJ9q7yToxlwJ-"
-      )
+  process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+  process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+  formRef.current,
+  process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+)
+
       .then(
         () => {
           setIsSent(true);
@@ -126,7 +127,7 @@ export default function Contact() {
 
             <Button
               type="submit"
-              className="w-full mt-8 bg-[#8fd3d5] text-black font-semibold hover:bg-[#abe7d6c8] transition"
+              className="w-full mt-8 bg-[#8fd3d5] text-black font-semibold hover:bg-[#abe7d600] transition"
               disabled={isLoading}
             >
               {isLoading ? "Sending..." : "Send Message"}
