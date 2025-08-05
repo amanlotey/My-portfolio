@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     "Next.js",
     "Portfolio",
   ],
-  authors: [{ name: "Amandeep Singh", url: "https://your-site.com" }],
+  authors: [{ name: "Amandeep Singh", url: "https://amandeep-portfolio-gamma.vercel.app/" }],
   openGraph: {
     title: "Amandeep Singh | Full-Stack Developer",
     description:
       "Web & Mobile Developer – React, React Native, Node.js, MongoDB.",
-    url: "https://your-site.com",
+    url: "https://amandeep-portfolio-gamma.vercel.app/",
     siteName: "Amandeep Portfolio",
     images: [
       {

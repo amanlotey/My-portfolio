@@ -28,31 +28,29 @@ const RadarChart = dynamic(() => import("@/components/RadarChart"), {
 });
 
 const techStack = [
-  { name: "React", icon: <FaReact />, color: "text-blue-400" },
-  { name: "Next.js", icon: <SiNextdotjs />, color: "text-white" },
-  { name: "Redux", icon: <SiRedux />, color: "text-purple-500" },
-  { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
-  { name: "TypeScript", icon: <SiTypescript />, color: "text-blue-600" },
-  { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-400" },
-  { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-teal-400" },
-  { name: "HTML5", icon: <FaHtml5 />, color: "text-orange-500" },
-  { name: "CSS3", icon: <FaCss3Alt />, color: "text-blue-500" },
-  { name: "Firebase", icon: <SiFirebase />, color: "text-yellow-500" },
-  { name: "MongoDB", icon: <SiMongodb />, color: "text-green-600" },
-  { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-blue-800" },
-  { name: "MySQL", icon: <SiMysql />, color: "text-sky-500" },
-  { name: "Git", icon: <FaGitAlt />, color: "text-red-500" },
-  { name: "GitHub", icon: <FaGithub />, color: "text-gray-300" },
-  { name: "Databases", icon: <FaDatabase />, color: "text-cyan-400" },
+  { name: "React", icon: <FaReact />, color: "text-blue-400", experience: "4+ years" },
+  { name: "Next.js", icon: <SiNextdotjs />, color: "text-white", experience: "3 years" },
+  { name: "Redux", icon: <SiRedux />, color: "text-purple-500", experience: "3 years" },
+  { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500", experience: "3+ years" },
+  { name: "TypeScript", icon: <SiTypescript />, color: "text-blue-600", experience: "2.5 years" },
+  { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-400", experience: "4+ years" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-teal-400", experience: "3 years" },
+  { name: "HTML5", icon: <FaHtml5 />, color: "text-orange-500", experience: "4+ years" },
+  { name: "CSS3", icon: <FaCss3Alt />, color: "text-blue-500", experience: "4+ years" },
+  { name: "Firebase", icon: <SiFirebase />, color: "text-yellow-500", experience: "2+ years" },
+  { name: "MongoDB", icon: <SiMongodb />, color: "text-green-600", experience: "3+ years" },
+  { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-blue-800", experience: "2 years" },
+  { name: "MySQL", icon: <SiMysql />, color: "text-sky-500", experience: "1.5 years" },
+  { name: "Git", icon: <FaGitAlt />, color: "text-red-500", experience: "4+ years" },
+  { name: "GitHub", icon: <FaGithub />, color: "text-gray-300", experience: "4+ years" },
+  { name: "Databases", icon: <FaDatabase />, color: "text-cyan-400", experience: "3+ years" },
 ];
 
 const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.08,
-    },
+    transition: { staggerChildren: 0.08 },
   },
 };
 
@@ -73,18 +71,14 @@ const About = () => {
           </h2>
           <p className="text-lg text-gray-300 leading-relaxed">
             I’m a developer who thrives on turning abstract ideas into intuitive
-            digital experiences. For me, writing code isn’t just about syntax —
-            it’s about designing smooth flows, solving unseen problems, and
-            leaving a touch of delight in every interface.
-            <br />
-            <br />
+            digital experiences. For me, writing code isn’t just about syntax — it’s
+            about designing smooth flows, solving unseen problems, and leaving a touch
+            of delight in every interface.
+            <br /><br />
             I’ve spent the past few years immersed in modern web and mobile
             technologies, always exploring the edges of what's possible. Whether
-            building something from scratch or refining something already good,
-            I bring a blend of precision, curiosity, and creative instinct to
-            the process. And when I’m not shipping features, you’ll probably
-            find me dissecting UI patterns, optimizing backend flows, or
-            sketching out “what if” ideas just for fun.
+            building something from scratch or refining something already good, I bring
+            a blend of precision, curiosity, and creative instinct to the process.
           </p>
         </div>
 
@@ -121,9 +115,9 @@ const About = () => {
                   <p className="text-sm font-semibold">{tech.name}</p>
                 </div>
                 {/* Back */}
-                <div className="flip-back px-2 text-xs text-center">
-                  <p>Experience with</p>
-                  <p className="italic mt-1">Real-world projects</p>
+                <div className="flip-back px-2 text-xs text-center flex flex-col justify-center items-center h-full">
+                  <p className="font-medium">{tech.experience}</p>
+                  <p className="italic text-gray-400 mt-1">Hands-on Experience</p>
                 </div>
               </div>
             </motion.div>
