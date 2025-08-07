@@ -39,9 +39,9 @@ export default function Projects() {
           <Card className="bg-[#111111] border border-purple-700/30 rounded-2xl shadow-xl p-6 md:p-10 transition-transform hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.3)] hover:scale-[1.02]">
             <div className="flex flex-col-reverse md:flex-row items-center md:items-start gap-10">
               <div className="md:w-1/2 w-full text-center md:text-left">
-                <CardTitle className="text-3xl md:text-4xl mb-4 text-purple-300 font-semibold"> MindVault</CardTitle>
-                <p className="text-base text-gray-300 mb-5 max-w-lg leading-relaxed">
-                  MindVault is a secure digital diary application built with the MERN stack, enabling users to privately document thoughts, feelings, and daily experiences. It features robust user authentication, encrypted entry storage, and a responsive interface for journaling. The backend uses JWT-based session handling, Express APIs for CRUD operations, and MongoDB for scalable storage — making privacy a priority without sacrificing usability.
+                <CardTitle className="text-3xl md:text-4xl mb-4 text-purple-300 font-semibold">MindVault</CardTitle>
+                <p className="text-base text-gray-300 mb-5 max-w-lg leading-relaxed mx-auto md:mx-0">
+                  MindVault is a secure digital diary application built with the MERN stack, enabling users to privately document thoughts, feelings, and daily experiences. It features robust user authentication, encrypted entry storage, and a responsive interface for journaling.
                 </p>
 
                 <div className="flex justify-center md:justify-start flex-wrap gap-3 mb-6">
@@ -55,7 +55,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <CardFooter className="px-0 pt-0">
+                <CardFooter className="px-0 pt-0 flex justify-center md:justify-start">
                   <a
                     href="https://github.com/amanlotey/MindVault"
                     target="_blank"
@@ -68,7 +68,7 @@ export default function Projects() {
               </div>
 
               <div className="md:w-1/2 w-full flex justify-center md:justify-end">
-                <div className="relative w-[320px] h-[200px] md:w-[440px] md:h-[280px] shadow-2xl rounded-xl overflow-hidden transform transition duration-300 hover:scale-105">
+                <div className="relative w-[90%] max-w-[380px] aspect-[16/10] md:w-[440px] md:h-[280px] shadow-2xl rounded-xl overflow-hidden transform transition duration-300 hover:scale-105">
                   <Image
                     src="/images/notes_generator.png"
                     alt="MindVault App Screenshot"
@@ -91,33 +91,29 @@ export default function Projects() {
         >
           <Card className="bg-[#111111] border border-purple-700/30 rounded-2xl shadow-xl p-6 md:p-10 transition-transform hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.3)] hover:scale-[1.02]">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
-              <div className="md:w-1/2 w-full flex justify-center md:justify-start">
-                <div className="relative h-[270px] w-[340px] md:h-[330px] md:w-[400px]">
-                  <div className="absolute top-0 left-0 rotate-[-10deg] z-10 shadow-2xl transition-transform duration-300 hover:scale-105">
-                    <Image
-                      src="/images/m_1.png"
-                      alt="MovieRadar App UI 1"
-                      width={180}
-                      height={360}
-                      className="ml-14 rounded-2xl"
-                    />
-                  </div>
-                  <div className="absolute top-6 left-10 rotate-[12deg] z-20 shadow-2xl transition-transform duration-300 hover:scale-105">
-                    <Image
-                      src="/images/m_2.png"
-                      alt="MovieRadar App UI 2"
-                      width={180}
-                      height={360}
-                      className="ml-14 rounded-2xl"
-                    />
-                  </div>
+              <div className="md:w-1/2 w-full flex justify-center md:justify-start relative h-[400px]">
+                <div className="relative w-[200px] h-[370px] sm:w-[180px] sm:h-[340px] md:w-[180px] md:h-[360px]">
+                  <Image
+                    src="/images/m_1.png"
+                    alt="MovieRadar App UI 1"
+                    fill
+                    className="object-cover rounded-2xl shadow-xl transform rotate-[-10deg]"
+                  />
+                </div>
+                <div className="absolute top-6 left-20 w-[200px] h-[370px] sm:w-[180px] sm:h-[340px] md:w-[180px] md:h-[360px]">
+                  <Image
+                    src="/images/m_2.png"
+                    alt="MovieRadar App UI 2"
+                    fill
+                    className="object-cover rounded-2xl shadow-xl transform rotate-[12deg]"
+                  />
                 </div>
               </div>
 
-              <div className="md:w-1/2 w-full text-center md:text-left ">
+              <div className="md:w-1/2 w-full text-center md:text-left">
                 <CardTitle className="text-3xl md:text-4xl mb-4 text-purple-300 font-semibold">MovieRadar</CardTitle>
-                <p className="text-base text-gray-300 mb-5 max-w-lg leading-relaxed">
-                  MovieRadar is a mobile-first film discovery app built with React Native, Expo, and Appwrite. It allows users to browse trending movies, explore by genres, and view detailed film information in real-time. Appwrite powers secure authentication and backend services, while the sleek UI is crafted using Tailwind and optimized for performance. The app’s modular design ensures scalability for future features like watchlists, user ratings, and personalized recommendations.
+                <p className="text-base text-gray-300 mb-5 max-w-lg leading-relaxed mx-auto md:mx-0">
+                  MovieRadar is a mobile-first film discovery app built with React Native, Expo, and Appwrite. It allows users to browse trending movies, explore by genres, and view detailed film information in real-time. Appwrite powers secure authentication, while Tailwind ensures an optimized UI.
                 </p>
 
                 <div className="flex justify-center md:justify-start flex-wrap gap-3 mb-6">
@@ -131,7 +127,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <CardFooter className="px-0 pt-0">
+                <CardFooter className="px-0 pt-0 flex justify-center md:justify-start">
                   <a
                     href="https://github.com/amanlotey/MovieRadar"
                     target="_blank"
