@@ -28,9 +28,73 @@ export default function Projects() {
       </h2>
 
       <div className="flex flex-col gap-20 max-w-6xl mx-auto">
-        {/* MindVault */}
+
+        {/* SkillLens — NEW */}
         <motion.div
           custom={1}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <Card className="bg-[#111111] border border-purple-700/30 rounded-2xl shadow-xl p-6 md:p-10 transition-transform hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.3)] hover:scale-[1.02]">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+              {/* Preview */}
+              <div className="md:w-1/2 w-full flex justify-center md:justify-start">
+                <div className="relative w-[90%] max-w-[420px] aspect-[16/10] md:w-[460px] md:h-[300px] rounded-xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/images/skilllens.webp"
+                    alt="SkillLens App Screenshot"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 560px"
+                    quality={100}    // Force max quality
+                    priority         // Load immediately
+                    unoptimized={false} // Let Next optimize, but at full quality
+                  />
+                </div>
+              </div>
+
+              {/* Text */}
+              <div className="md:w-1/2 w-full text-center md:text-left">
+                <CardTitle className="text-3xl md:text-4xl mb-4 text-purple-300 font-semibold">
+                  SkillLens — AI Skills Gap Analyzer
+                </CardTitle>
+                <p className="text-base text-gray-300 mb-5 max-w-lg leading-relaxed mx-auto md:mx-0">
+                  SkillLens compares a resume with a job description to surface matched and missing skills, and
+                  generates a focused learning plan with resource links. Built with Next.js, TypeScript, Tailwind,
+                  and Groq for fast, structured AI responses. Smooth micro-interactions via Framer Motion.
+                </p>
+
+                <div className="flex justify-center md:justify-start flex-wrap gap-3 mb-6">
+                  {["Next.js", "TypeScript", "Tailwind", "Groq", "Framer Motion"].map((tag) => (
+                    <span
+                      key={tag}
+                      className="bg-purple-900/30 text-purple-200 font-medium text-xs px-3 py-1 rounded-full shadow-sm"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <CardFooter className="px-0 pt-0 flex justify-center md:justify-start">
+                  <a
+                    href="https://github.com/amanlotey/SkillLens"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 border border-white text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-white/10 transition"
+                  >
+                    Source Code <FaGithub className="text-lg" />
+                  </a>
+                </CardFooter>
+              </div>
+            </div>
+          </Card>
+        </motion.div>
+
+        {/* MindVault */}
+        <motion.div
+          custom={2}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -83,7 +147,7 @@ export default function Projects() {
 
         {/* MovieRadar */}
         <motion.div
-          custom={2}
+          custom={3}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
