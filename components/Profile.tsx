@@ -3,6 +3,7 @@
 import React from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import TypewriterText from "./TypeWriter";
+import MeshBackground from "./ui/MeshBackground";
 
 const Hero = () => {
   const smoothScrollTo = (id: string) => {
@@ -21,6 +22,7 @@ const Hero = () => {
       id="profile"
       className="relative min-h-screen text-white overflow-hidden px-6 flex flex-col justify-center items-center text-center bg-gradient-to-b from-black via-black to-[#01162f]"
     >
+       <MeshBackground />
       <div className="z-10 flex flex-col items-start gap-6 max-w-3xl">
         <div className="flex items-center gap-4">
           <span className="h-16 w-1 bg-gradient-to-b from-purple-500 to-pink-500 rounded"></span>

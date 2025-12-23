@@ -43,7 +43,7 @@ export default function Projects() {
               <div className="md:w-1/2 w-full flex justify-center md:justify-start">
                 <div className="relative w-[90%] max-w-[420px] aspect-[16/10] md:w-[460px] md:h-[300px] rounded-xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/skilllens.webp"
+                    src="/images/skilllens.jpg"
                     alt="SkillLens App Screenshot"
                     fill
                     className="object-cover"
@@ -134,7 +134,7 @@ export default function Projects() {
               <div className="md:w-1/2 w-full flex justify-center md:justify-end">
                 <div className="relative w-[90%] max-w-[380px] aspect-[16/10] md:w-[440px] md:h-[280px] shadow-2xl rounded-xl overflow-hidden transform transition duration-300 hover:scale-105">
                   <Image
-                    src="/images/notes_generator.png"
+                    src="/images/notes_generator.jpg"
                     alt="MindVault App Screenshot"
                     fill
                     className="object-cover rounded-xl"
@@ -178,7 +178,7 @@ export default function Projects() {
                 <CardTitle className="text-3xl md:text-4xl mb-4 text-purple-300 font-semibold">MovieRadar</CardTitle>
                 <p className="text-base text-gray-300 mb-5 max-w-lg leading-relaxed mx-auto md:mx-0">
                   MovieRadar is a mobile-first film discovery app built with React Native, Expo, and Appwrite. It allows users to browse trending movies, explore by genres, and view detailed film information in real-time. Appwrite powers secure authentication, while Tailwind ensures an optimized UI.
-                </p>
+                </p>    
 
                 <div className="flex justify-center md:justify-start flex-wrap gap-3 mb-6">
                   {["React Native", "Appwrite", "Tailwind", "Expo"].map((tag) => (
