@@ -1,33 +1,45 @@
-"use client"
+"use client";
 
-import { Link } from "react-scroll"
+import { useEffect, useState } from "react";
+import GradientMenu from "../components/gradient-menu";
+
+const sections = ["profile", "about", "projects", "contact"];
 
 export default function Header() {
-  const navItems = [
-    { name: "Home", to: "profile" },
-    { name: "About", to: "about" },
-    { name: "Projects", to: "projects" },
-    { name: "Contact", to: "contact" },
-  ]
+  const [activeSection, setActiveSection] = useState("profile");
+
+  // Track active section on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY + 120;
+      for (const id of [...sections].reverse()) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollY) {
+          setActiveSection(id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    window.scrollTo({
+      top: el.getBoundingClientRect().top + window.pageYOffset - 70,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <header className="sticky top-6 z-50 flex justify-center">
-      <nav className="flex gap-4 px-6 py-2 rounded-full backdrop-blur-md bg-black/30 border border-white/10 shadow-xl">
-        {navItems.map((item) => (
-          <Link
-            key={item.to}
-            to={item.to}
-            smooth={true}
-            duration={500}
-            spy={true}
-            offset={-70} // adjust if you have a sticky header
-            activeClass="bg-white/20"
-            className="cursor-pointer text-white px-5 py-2 rounded-full hover:bg-white/10 transition"
-          >
-            {item.name}
-          </Link>
-        ))}
+    <header className="fixed top-6 left-0 right-0 z-50 flex justify-center pointer-events-none">
+      <nav className="pointer-events-auto px-3 py-2 rounded-full backdrop-blur-md bg-black/20 border border-white/[0.08] shadow-2xl">
+        <GradientMenu onItemClick={scrollTo} activeSection={activeSection} />
       </nav>
     </header>
-  )
+  );
 }

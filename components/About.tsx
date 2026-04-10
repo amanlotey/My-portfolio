@@ -125,15 +125,7 @@ const About = () => {
         </motion.div>
       </div>
 
-      {/* Radar Chart */}
-      <section className="py-20 px-4 md:px-10 bg-black text-white">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-          🧠 Tech Radar
-        </h2>
-        <div className="max-w-4xl mx-auto">
-          <RadarChart />
-        </div>
-      </section>
+      
     </section>
   );
 };
