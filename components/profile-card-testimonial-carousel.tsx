@@ -33,7 +33,7 @@ const projects: Project[] = [
     tagline: "AI Skills Gap Analyzer",
     description:
       "Compares a resume with a job description to surface matched and missing skills, then generates a focused learning plan with resource links. Built with Next.js, TypeScript, Tailwind, and Groq for fast, structured AI responses.",
-    imageUrl: "/images/skilllens.jpg",
+    imageUrl: "/images/skilllens.png",
     tags: ["Next.js", "TypeScript", "Tailwind", "Groq", "Framer Motion"],
     githubUrl: "https://github.com/amanlotey/SkillLens",
   },
@@ -42,7 +42,7 @@ const projects: Project[] = [
     tagline: "Secure Digital Diary",
     description:
       "A secure digital diary application built with the MERN stack, enabling users to privately document thoughts, feelings, and daily experiences. Features robust authentication, encrypted entry storage, and a responsive journaling interface.",
-    imageUrl: "/images/notes_generator.jpg",
+    imageUrl: "/images/notes_generator.png",
     tags: ["React", "Express", "MongoDB", "Tailwind", "Bootstrap"],
     githubUrl: "https://github.com/amanlotey/MindVault",
   },
