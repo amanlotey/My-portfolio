@@ -55,10 +55,9 @@ export default function Hero() {
               className="text-transparent select-none"
               style={{ WebkitTextStroke: "1px rgba(255,255,255,0.22)" }}
             >
-              deep
+              Lotey
             </span>
-            <br />
-            Singh
+            
           </h1>
 
           {/* Tagline */}
