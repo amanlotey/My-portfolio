@@ -12,13 +12,22 @@ interface Project {
   description: string;
   imageUrl: string;
   tags: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
   isDouble?: boolean;
   image2?: string;
 }
 
 const projects: Project[] = [
+  {
+    name: "Manova",
+    tagline: "AI-Powered SEO & AEO Platform",
+    description:
+      "A full-stack SaaS platform that helps agencies manage multiple SEO and AEO projects from one dashboard. Features AI-powered insights, multi-role workspaces, real-time collaboration, secure authentication, subscription payments, and streamlined client campaign management.",
+    imageUrl: "/images/manova.png",
+    tags: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "OpenAI", "Stripe", "WebSocket"],
+    liveUrl: "https://app.manova.pro",
+  },
   {
     name: "VoiceDesk",
     tagline: "AI-Powered Business Assistant",
@@ -229,23 +238,30 @@ export function TestimonialCarousel({ className }: { className?: string }) {
               </div>
 
               <div className="flex items-center gap-4 pt-1">
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-[0.72rem] font-medium tracking-[0.08em] uppercase hover:opacity-80 transition-all duration-200 hover:scale-[1.02]"
-                >
-                  <Github className="w-3.5 h-3.5" />
-                  Source Code
-                </a>
+                {project.githubUrl != null && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-[0.72rem] font-medium tracking-[0.08em] uppercase hover:opacity-80 transition-all duration-200 hover:scale-[1.02]"
+                  >
+                    <Github className="w-3.5 h-3.5" />
+                    Source Code
+                  </a>
+                )}
                 {project.liveUrl != null && (
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-white/40 text-[0.72rem] tracking-[0.08em] uppercase hover:text-white transition-colors group"
+                    className={cn(
+                      "inline-flex items-center gap-2 text-[0.72rem] tracking-[0.08em] uppercase transition-all duration-200 group",
+                      project.githubUrl == null
+                        ? "px-5 py-2.5 rounded-full bg-white text-black font-medium hover:opacity-80 hover:scale-[1.02]"
+                        : "text-white/40 hover:text-white"
+                    )}
                   >
-                    Live Demo
+                    View Live Project
                     <ExternalLink className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
                 )}
@@ -298,15 +314,30 @@ export function TestimonialCarousel({ className }: { className?: string }) {
                 ))}
               </div>
 
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-[0.7rem] font-medium tracking-[0.08em] uppercase w-fit hover:opacity-80 transition"
-              >
-                <Github className="w-3.5 h-3.5" />
-                Source Code
-              </a>
+              <div className="flex flex-wrap items-center gap-3">
+                {project.githubUrl != null && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-[0.7rem] font-medium tracking-[0.08em] uppercase w-fit hover:opacity-80 transition"
+                  >
+                    <Github className="w-3.5 h-3.5" />
+                    Source Code
+                  </a>
+                )}
+                {project.liveUrl != null && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-[0.7rem] font-medium tracking-[0.08em] uppercase w-fit hover:opacity-80 transition"
+                  >
+                    View Live Project
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
